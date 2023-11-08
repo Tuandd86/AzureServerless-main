@@ -1,0 +1,32 @@
+Azure Function for Image Resizing
+
+Use Case Description:
+When images are uploaded to a blob storage container, an Azure Function is triggered to resize the images to a standard size for thumbnails. 
+This is a typical requirement for any web service that handles user-uploaded images and needs to display them in a uniform size across their platform.
+
+Expected Outcomes:
+
+- Learn to set up an Azure Blob Storage account.
+- Create an Azure Function triggered by blob storage creation events.
+- Use the SkiaSharp library or similar to resize images.
+- Save the resized image back to blob storage in a 'thumbnails' container.
+
+Step 1: Set up Azure Blob Storage
+1. Sign in to Azure Portal:
+    Go to https://portal.azure.com and sign in with your account.
+
+2. Create a Storage Account:    
+    Click on "Create a resource".
+    Search for "Storage Account" and select it.
+    Click "Create".
+    Fill in the required fields such as Subscription, Resource Group (you might need to create a new one), Storage account name, and Location.
+    Choose "Standard" performance and "BlobStorage" as the account kind (if available) or "StorageV2 (general purpose v2)".
+    Click "Review + Create" and then "Create" once validation passes.
+    
+3.Create Blob Containers:
+    Navigate to your new storage account and find the "Blob service" section.
+    Click on "Containers".
+    Click "+ Container" to add a new container.
+    Create one container named "images" with private access level.
+    Repeat the process to create another container named "thumbnails".
+
