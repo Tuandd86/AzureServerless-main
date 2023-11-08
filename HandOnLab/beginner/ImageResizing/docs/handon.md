@@ -71,7 +71,7 @@ In the terminal within VS Code:
 ```sh
 dotnet add package SkiaSharp
 dotnet add package Microsoft.Azure.WebJobs.Extensions.Storage --version 4.0.4
-
+```
 ## Step 3: Implement Image Resizing Logic
 
 Modify the function code within your Azure Function project to resize images using SkiaSharp and save the result to the `thumbnails` container.
@@ -140,7 +140,7 @@ public static class ImageResizerFunction
         return outputStream;
     }
 }
-
+```
 ## Step 4: Test the Function
 
 Once your function is ready, it's time to test it to ensure that it works as expected.
