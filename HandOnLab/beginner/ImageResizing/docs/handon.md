@@ -1,5 +1,27 @@
 # Azure Function Image Resizing Guide
 
+This guide will take you through the process of setting up an Azure Blob Storage account, creating an Azure Function that is triggered by blob storage creation events, resizing images using the SkiaSharp library, and saving the resized images back to blob storage in a 'thumbnails' container.
+
+## Expected Outcomes
+
+By following this guide, you will:
+
+- Learn to set up an Azure Blob Storage account with appropriate containers for image uploads and thumbnails.
+- Create an Azure Function App that responds to new images uploaded to a specific container.
+- Implement logic within the function using SkiaSharp to resize images to a standard thumbnail size.
+- Test the entire process by uploading an image to the 'images' container and observing the creation of a resized image in the 'thumbnails' container.
+
+
+## Prerequisites
+
+- Azure subscription
+- Visual Studio Code installed
+- Azure Functions extension for VS Code installed
+- Azure CLI installed or access to Azure Portal
+
+
+# Azure Function Image Resizing Guide
+
 This guide outlines the process of creating an Azure Function that automatically resizes images when they are uploaded to Azure Blob Storage.
 
 ## Step 1: Set up Azure Blob Storage
