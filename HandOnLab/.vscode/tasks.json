@@ -68,10 +68,44 @@
 			}
 		},
 		{
+			"label": "build-ProductReview",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/intermediate/ProductReview/src/ProductReview.csproj",
+				"--configuration",
+				"Release",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile",
+			"options": {
+				"cwd": "${workspaceFolder}/intermediate/ProductReview/src"
+			}
+		},
+		{
+			"label": "build-InventoryManagement",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/intermediate/InventoryManagement/src/BackEnd/InventoryManagement.csproj",
+				"--configuration",
+				"Release",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile",
+			"options": {
+				"cwd": "${workspaceFolder}/intermediate/InventoryManagement/src/BackEnd"
+			}
+		},
+		{
 			"type": "func",
 			"dependsOn": "build (functions)",
 			"options": {
-				"cwd": "${workspaceFolder}/intermediate\\InventoryManagement\\src\\BackEnd/bin/Debug/net6.0"
+				"cwd": "${workspaceFolder}/intermediate\\ProductReview\\src/bin/Debug/net6.0"
 			},
 			"command": "host start",
 			"isBackground": true,

@@ -2,6 +2,28 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run ProductReview",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-ProductReview",
+            "program": "${workspaceFolder}/intermediate/ProductReview/src/bin/Debug/net6.0/ProductReview.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/intermediate/ProductReview/src",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Run InventoryManagement",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-InventoryManagement",
+            "program": "${workspaceFolder}/intermediate/InventoryManagement/src/BackEnd/bin/Debug/net6.0/InventoryManagement.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/intermediate/InventoryManagement/src/BackEnd",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
             "name": "Attach to .NET Functions",
             "type": "coreclr",
             "request": "attach",
